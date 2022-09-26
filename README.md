@@ -1,9 +1,5 @@
 # selectlist
 
-> Made with create-react-library
-
-[![NPM](https://img.shields.io/npm/v/selectlist.svg)](https://www.npmjs.com/package/selectlist) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-
 ## Install
 
 ```bash
@@ -13,17 +9,29 @@ npm install --save selectlist
 ## Usage
 
 ```tsx
-import React, { Component } from 'react'
-
-import MyComponent from 'selectlist'
-import 'selectlist/dist/index.css'
-
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
+Props: {
+  data: string[] = ["abc", "def"]
+  headline: string | number = "Something"
+  class: string = "personalized class"
+  listStyle: string = "another class"
+  activeValueClass: string = "another class"
 }
+
+<ListSelect data={array} headline={headline} />
 ```
+
+## Props list :
+
+  ```
+  | Props            | Required | Type          |
+  | data             | true     | string[]      |
+  | headline         | true     | string|number |
+  | class            | false    | string        |
+  | listStyle        | false    | string        |
+  | activeValueClass | false    | string        | 
+  ```
+
+class && labelStyle && activeValueClass are just different applied classes
 
 ## License
 

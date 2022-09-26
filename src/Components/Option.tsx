@@ -5,16 +5,18 @@ interface IOption {
   value: string
   onClick?: any
   activeValue: string
+  activeValueStyle?: string
+  listStyle?: string
 }
 
 const Option: React.FC<IOption> = (props) => {
   return (
     <li
       value={props.value}
-      className={`px-4 py-1 w-full h-8 border-solid border-[1px] border-blue hover:bg-blue hover:text-white cursor-pointer ${
+      className={`${
         props.value === props.activeValue
-          ? 'bg-blue text-white'
-          : 'bg-white text-blue'
+          ? props.activeValueStyle
+          : props.listStyle
       }`}
       onClick={() => props.onClick(props.value)}
     >

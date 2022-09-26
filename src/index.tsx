@@ -6,6 +6,9 @@ import Option from './Components/Option'
 interface ISelect {
   data: string[]
   headline: string | number
+  class?: string
+  listStyle?: string
+  activeValueStyle?: string
 }
 
 export const ListSelect: React.FC<ISelect> = (props) => {
@@ -21,15 +24,10 @@ export const ListSelect: React.FC<ISelect> = (props) => {
   }
 
   return (
-    <div
-      id='select-wrapper'
-      className='bg-white text-blue rounded font-semibold cursor-pointer relative'
-    >
+    <div id='select-wrapper' className={props.class}>
       <div>
         <ul className='h-8 py-1 px-4' onClick={openMenuHandler}>
-          <label htmlFor='department'>
-            {activeValue ? activeValue : props.headline}
-          </label>
+          <label>{activeValue ? activeValue : props.headline}</label>
           <div className='absolute w-full left-0 mt-1 rounded-lg'>
             {isMenuOpen &&
               props.data?.map((value: string) => {
@@ -39,6 +37,8 @@ export const ListSelect: React.FC<ISelect> = (props) => {
                     key={Math.random().toString()}
                     onClick={setActiveValueHandler}
                     activeValue={activeValue}
+                    activeValueStyle={props.activeValueStyle}
+                    listStyle={props.listStyle}
                   />
                 )
               })}
