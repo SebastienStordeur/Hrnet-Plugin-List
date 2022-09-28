@@ -1,7 +1,7 @@
 {
   "name": "list-select",
   "version": "1.0.6",
-  "description": "Select plugin component",
+  "description": "Select plugin component made for the HRnet Openclassrooms training",
   "author": "SebastienStordeur",
   "license": "MIT",
   "repository": "SebastienStordeur/Hrnet-Plugin-List.git",
@@ -11,6 +11,9 @@
   "engines": {
     "node": ">=10"
   },
+  "keywords": [
+    "select", "options", "plugin"
+  ],
   "scripts": {
     "build": "microbundle-crl --no-compress --format modern,cjs",
     "start": "microbundle-crl watch --no-compress --format modern,cjs",
@@ -24,7 +27,7 @@
     "deploy": "gh-pages -d example/build"
   },
   "peerDependencies": {
-    "react": "^16.0.0"
+    "react": "^18.2.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^4.2.4",
