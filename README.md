@@ -3,7 +3,7 @@
 ## Install
 
 ```bash
-npm install --save selectlist
+npm install --save list-select
 ```
 
 ## Usage
