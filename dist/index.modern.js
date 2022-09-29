@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 var Option = function Option(props) {
   return React.createElement("li", {
     value: props.value,
-    className: "" + (props.value === props.activeValue ? props.activeValueStyle : props.listStyle),
+    className: (props.defaultListStyle || '') + " " + (props.value === props.activeValue ? props.activeValueStyle : props.listStyle),
     onClick: function onClick() {
       return props.onClick(props.value);
     }
@@ -46,7 +46,8 @@ var ListSelect = function ListSelect(props) {
       onClick: setActiveValueHandler,
       activeValue: activeValue,
       activeValueStyle: props.activeValueStyle,
-      listStyle: props.listStyle
+      listStyle: props.listStyle,
+      defaultListStyle: props.defaultListStyle
     });
   }))))));
 };

@@ -5,6 +5,7 @@ interface ISelect {
     class?: string;
     listStyle?: string;
     activeValueStyle?: string;
+    defaultListStyle?: string;
 }
 export declare const ListSelect: React.FC<ISelect>;
 export {};

@@ -7,6 +7,7 @@ interface ISelect {
   data: string[]
   headline: string | number
   class?: string
+  listContainerStyle?: string
   listStyle?: string
   activeValueStyle?: string
   defaultListStyle?: string
@@ -29,7 +30,7 @@ export const ListSelect: React.FC<ISelect> = (props) => {
       <div>
         <ul className='h-8 py-1 px-4' onClick={openMenuHandler}>
           <label>{activeValue ? activeValue : props.headline}</label>
-          <div className='absolute w-full left-0 mt-1 rounded-lg'>
+          <div className={props.listContainerStyle}>
             {isMenuOpen &&
               props.data?.map((value: string) => {
                 return (
