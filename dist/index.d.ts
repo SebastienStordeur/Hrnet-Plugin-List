@@ -3,6 +3,7 @@ interface ISelect {
     data: string[];
     headline: string | number;
     class?: string;
+    listContainerStyle?: string;
     listStyle?: string;
     activeValueStyle?: string;
     defaultListStyle?: string;
