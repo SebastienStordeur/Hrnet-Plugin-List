@@ -7,13 +7,14 @@ interface IOption {
   activeValue: string
   activeValueStyle?: string
   listStyle?: string
+  defaultListStyle?: string
 }
 
 const Option: React.FC<IOption> = (props) => {
   return (
     <li
       value={props.value}
-      className={`${
+      className={`${props.defaultListStyle || ''} ${
         props.value === props.activeValue
           ? props.activeValueStyle
           : props.listStyle

@@ -9,6 +9,7 @@ interface ISelect {
   class?: string
   listStyle?: string
   activeValueStyle?: string
+  defaultListStyle?: string
 }
 
 export const ListSelect: React.FC<ISelect> = (props) => {
@@ -39,6 +40,7 @@ export const ListSelect: React.FC<ISelect> = (props) => {
                     activeValue={activeValue}
                     activeValueStyle={props.activeValueStyle}
                     listStyle={props.listStyle}
+                    defaultListStyle={props.defaultListStyle}
                   />
                 )
               })}

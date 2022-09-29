@@ -16,14 +16,15 @@ npm install --save list-select
 
   ```
   | Props            | Required | Type          |
-  | data             | true     | string[]      |
+  | data             | true     | string[]      | 
   | headline         | true     | string|number |
   | class            | false    | string        |
   | listStyle        | false    | string        |
-  | activeValueStyle | false    | string        | 
+  | activeValueStyle | false    | string        |
+  | defaultListStyle | false    | string        |
   ```
 
-class, labelStyle, activeValueStyle are just different applied classes
+class, labelStyle, activeValueStyle, defaultListStyle are just different applied classes
 
 ## License
 
