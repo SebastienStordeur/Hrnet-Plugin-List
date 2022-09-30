@@ -14,9 +14,9 @@ const Option: React.FC<IOption> = (props) => {
   return (
     <li
       value={props.value}
-      className={`${props.defaultListStyle || ''} ${
+      className={`${props.defaultListStyle || 'default-list'} ${
         props.value === props.activeValue
-          ? props.activeValueStyle
+          ? props.activeValueStyle || 'active-list'
           : props.listStyle
       }`}
       onClick={() => props.onClick(props.value)}

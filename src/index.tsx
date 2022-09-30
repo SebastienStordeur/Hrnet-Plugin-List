@@ -26,11 +26,13 @@ export const ListSelect: React.FC<ISelect> = (props) => {
   }
 
   return (
-    <div id='select-wrapper' className={props.class}>
+    <div id='select-wrapper' className={props.class || 'wrapper'}>
       <div>
         <ul className='h-8 py-1 px-4' onClick={openMenuHandler}>
-          <label>{activeValue ? activeValue : props.headline}</label>
-          <div className={props.listContainerStyle}>
+          <label id={activeValue || ''}>
+            {activeValue ? activeValue : props.headline}
+          </label>
+          <div className={props.listContainerStyle || 'list-container'}>
             {isMenuOpen &&
               props.data?.map((value: string) => {
                 return (

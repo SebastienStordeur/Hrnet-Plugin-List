@@ -40,7 +40,9 @@ var ListSelect = function ListSelect(props) {
   }, React__default.createElement("div", null, React__default.createElement("ul", {
     className: 'h-8 py-1 px-4',
     onClick: openMenuHandler
-  }, React__default.createElement("label", null, activeValue ? activeValue : props.headline), React__default.createElement("div", {
+  }, React__default.createElement("label", {
+    id: activeValue
+  }, activeValue ? activeValue : props.headline), React__default.createElement("div", {
     className: props.listContainerStyle
   }, isMenuOpen && ((_props$data = props.data) === null || _props$data === void 0 ? void 0 : _props$data.map(function (value) {
     return React__default.createElement(Option, {

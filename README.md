@@ -17,14 +17,14 @@ import { ListSelect } from "list-select";
 ## Props list :
 
   ```
-  | Props               | Required | Type          |
+  | Props               | Required | Type          | Class Equivalent
   | data                | true     | string[]      | 
   | headline            | true     | string|number |
-  | class               | false    | string        |
-  | listContainerStyle  | false    | string        |
+  | class               | false    | string        | wrapper
+  | listContainerStyle  | false    | string        | list-container
   | listStyle           | false    | string        |
-  | activeValueStyle    | false    | string        |
-  | defaultListStyle    | false    | string        |
+  | activeValueStyle    | false    | string        | active-list
+  | defaultListStyle    | false    | string        | default-list
   ```
 
 class, labelStyle, activeValueStyle, defaultListStyle are just different applied classes

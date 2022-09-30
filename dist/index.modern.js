@@ -37,7 +37,9 @@ var ListSelect = function ListSelect(props) {
   }, React.createElement("div", null, React.createElement("ul", {
     className: 'h-8 py-1 px-4',
     onClick: openMenuHandler
-  }, React.createElement("label", null, activeValue ? activeValue : props.headline), React.createElement("div", {
+  }, React.createElement("label", {
+    id: activeValue
+  }, activeValue ? activeValue : props.headline), React.createElement("div", {
     className: props.listContainerStyle
   }, isMenuOpen && ((_props$data = props.data) === null || _props$data === void 0 ? void 0 : _props$data.map(function (value) {
     return React.createElement(Option, {
