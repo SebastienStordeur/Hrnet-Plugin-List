@@ -6,7 +6,7 @@ var React__default = _interopDefault(React);
 var Option = function Option(props) {
   return React__default.createElement("li", {
     value: props.value,
-    className: (props.defaultListStyle || '') + " " + (props.value === props.activeValue ? props.activeValueStyle : props.listStyle),
+    className: (props.defaultListStyle || 'default-list') + " " + (props.value === props.activeValue ? props.activeValueStyle || 'active-list' : props.listStyle),
     onClick: function onClick() {
       return props.onClick(props.value);
     }
@@ -36,14 +36,14 @@ var ListSelect = function ListSelect(props) {
 
   return React__default.createElement("div", {
     id: 'select-wrapper',
-    className: props["class"]
+    className: props["class"] || 'wrapper'
   }, React__default.createElement("div", null, React__default.createElement("ul", {
     className: 'h-8 py-1 px-4',
     onClick: openMenuHandler
   }, React__default.createElement("label", {
-    id: activeValue
+    id: activeValue ? activeValue : props.id
   }, activeValue ? activeValue : props.headline), React__default.createElement("div", {
-    className: props.listContainerStyle
+    className: props.listContainerStyle || 'list-container'
   }, isMenuOpen && ((_props$data = props.data) === null || _props$data === void 0 ? void 0 : _props$data.map(function (value) {
     return React__default.createElement(Option, {
       value: value,

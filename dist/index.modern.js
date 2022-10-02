@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 var Option = function Option(props) {
   return React.createElement("li", {
     value: props.value,
-    className: (props.defaultListStyle || '') + " " + (props.value === props.activeValue ? props.activeValueStyle : props.listStyle),
+    className: (props.defaultListStyle || 'default-list') + " " + (props.value === props.activeValue ? props.activeValueStyle || 'active-list' : props.listStyle),
     onClick: function onClick() {
       return props.onClick(props.value);
     }
@@ -33,14 +33,14 @@ var ListSelect = function ListSelect(props) {
 
   return React.createElement("div", {
     id: 'select-wrapper',
-    className: props["class"]
+    className: props["class"] || 'wrapper'
   }, React.createElement("div", null, React.createElement("ul", {
     className: 'h-8 py-1 px-4',
     onClick: openMenuHandler
   }, React.createElement("label", {
-    id: activeValue
+    id: activeValue ? activeValue : props.id
   }, activeValue ? activeValue : props.headline), React.createElement("div", {
-    className: props.listContainerStyle
+    className: props.listContainerStyle || 'list-container'
   }, isMenuOpen && ((_props$data = props.data) === null || _props$data === void 0 ? void 0 : _props$data.map(function (value) {
     return React.createElement(Option, {
       value: value,

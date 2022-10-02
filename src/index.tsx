@@ -6,6 +6,7 @@ import Option from './Components/Option'
 interface ISelect {
   data: string[]
   headline: string | number
+  id: string
   class?: string
   listContainerStyle?: string
   listStyle?: string
@@ -29,7 +30,7 @@ export const ListSelect: React.FC<ISelect> = (props) => {
     <div id='select-wrapper' className={props.class || 'wrapper'}>
       <div>
         <ul className='h-8 py-1 px-4' onClick={openMenuHandler}>
-          <label id={activeValue || ''}>
+          <label id={activeValue ? activeValue : props.id}>
             {activeValue ? activeValue : props.headline}
           </label>
           <div className={props.listContainerStyle || 'list-container'}>

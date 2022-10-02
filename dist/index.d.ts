@@ -2,6 +2,7 @@ import React from 'react';
 interface ISelect {
     data: string[];
     headline: string | number;
+    id: string;
     class?: string;
     listContainerStyle?: string;
     listStyle?: string;

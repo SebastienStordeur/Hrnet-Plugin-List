@@ -25,6 +25,7 @@ import { ListSelect } from "list-select";
   | listStyle           | false    | string        |
   | activeValueStyle    | false    | string        | active-list
   | defaultListStyle    | false    | string        | default-list
+  | id                  | true     | string        |
   ```
 
 class, labelStyle, activeValueStyle, defaultListStyle are just different applied classes
